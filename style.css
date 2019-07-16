@@ -1,0 +1,14 @@
+.container{
+    width: 480px;
+    height: 480px;
+    background:rgba(255, 190, 190, 0.863);
+    display:grid;
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px ;
+}
+.cell{
+    background:whitesmoke;
+}
+.hovered{
+    background:black;
+}
