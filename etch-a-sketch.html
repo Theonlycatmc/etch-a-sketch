@@ -20,12 +20,12 @@
       container.removeChild(container.firstChild);
     }   function checkSize(gridSize){
           if(gridSize<0){
-              return
+            checkSize(prompt('No. Pick a number greater than 0'))
             } else if(gridSize > 100){
               if(confirm("Are you sure? Gridsizes greater than 100 can lag your computer.")){
-                makeBoxes(gridSize)
+                makeBoxes(parseInt(gridSize))
               } return
-            } else makeBoxes(gridSize)
+            } else makeBoxes(parseInt(gridSize))
 
         function makeBoxes(gridSize){
         function makeGrid(gridSize){
