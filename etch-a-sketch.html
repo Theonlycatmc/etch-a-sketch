@@ -18,11 +18,16 @@
     let gridString = ''
     while (container.firstChild){
       container.removeChild(container.firstChild);
-    }
-        function makeBoxes(gridSize){
+    }   function checkSize(gridSize){
           if(gridSize<0){
-            return
-          }
+              return
+            } else if(gridSize > 100){
+              if(confirm("Are you sure? Gridsizes greater than 100 can lag your computer.")){
+                makeBoxes(gridSize)
+              } return
+            } else makeBoxes(gridSize)
+
+        function makeBoxes(gridSize){
         function makeGrid(gridSize){
           for(i=0; i < gridSize;i++){
             gridString = gridString + `auto `
@@ -41,10 +46,11 @@
           makeBox()
         }
       }
+    }
       function addHovered(e){
         this.classList.add('hovered')
       }
-      makeBoxes(prompt('What size grid?'))
+      checkSize(prompt('What size grid?'))
       let cells = document.querySelectorAll('.cell')
       cells.forEach((cell => {
         cell.addEventListener('mouseover', addHovered)
