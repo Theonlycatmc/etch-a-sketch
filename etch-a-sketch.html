@@ -20,6 +20,9 @@
       container.removeChild(container.firstChild);
     }
         function makeBoxes(gridSize){
+          if(gridSize<0){
+            return
+          }
         function makeGrid(gridSize){
           for(i=0; i < gridSize;i++){
             gridString = gridString + `auto `
